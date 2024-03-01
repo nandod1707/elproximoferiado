@@ -7,23 +7,25 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-	"format": "prettier --write \"src/**/*.{js,jsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
+    "@analytics/google-analytics": "^1.0.7",
+    "analytics": "^0.8.11",
     "dayjs": "^1.11.10",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
-	"eslint-config-prettier": "^8.3.0",
-	"eslint-import-resolver-alias": "^1.1.2",
-	"eslint-import-resolver-typescript": "^2.5.0",
-	"eslint-plugin-import": "^2.25.4",
-	"next-transpile-modules": "^9.0.0",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "next-transpile-modules": "^9.0.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0"

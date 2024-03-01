@@ -1,5 +1,7 @@
 import { Poppins } from "next/font/google";
-import { progressUntilNextHoliday, daysUntilNextHoliday } from "./holidays";
+import { daysUntilNextHoliday } from "./holidays";
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
 import "./globals.css";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ['400', '500', '600', '700'] });
@@ -17,7 +19,7 @@ const backgroundColor = () => {
 
 	let rgbValues = backgroundRed
 
-	if(daysUntilNextHoliday() < 7) {
+	if (daysUntilNextHoliday() < 7) {
 		rgbValues = backgroundGreen
 	} else if (daysUntilNextHoliday() < 15) {
 		rgbValues = backgroundYellow
@@ -27,7 +29,19 @@ const backgroundColor = () => {
 
 }
 
+const analytics = Analytics({
+	app: 'el-proximo-feriado',
+	plugins: [
+		googleAnalytics({
+			measurementIds: ['G-919V3NNBFH']
+		})
+	]
+})
+
 export default function RootLayout({ children }) {
+	
+	analytics.page()
+
 	return (
 		<html lang="en">
 			<body
