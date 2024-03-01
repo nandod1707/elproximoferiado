@@ -29,6 +29,7 @@ dayjs.updateLocale('es', {
 
 const holidays = [
 	{
+		weekday: 'Lunes',
 		date: 1,
 		month: 1,
 		year: 2024,
@@ -36,6 +37,7 @@ const holidays = [
 		name: "Año Nuevo"
 	},
 	{
+		weekday: 'Lunes',
 		date: 12,
 		month: 2,
 		year: 2024,
@@ -43,6 +45,7 @@ const holidays = [
 		name: "Carnaval"
 	},
 	{
+		weekday: 'Martes',
 		date: 13,
 		month: 2,
 		year: 2024,
@@ -50,6 +53,7 @@ const holidays = [
 		name: "Carnaval"
 	},
 	{
+		weekday: 'Domingo',
 		date: 24,
 		month: 3,
 		year: 2024,
@@ -57,6 +61,7 @@ const holidays = [
 		name: "Día Nacional de la Memoria por la Verdad y la Justicia"
 	},
 	{
+		weekday: 'Jueves',
 		date: 28,
 		month: 3,
 		year: 2024,
@@ -64,6 +69,7 @@ const holidays = [
 		name: "Jueves Santo"
 	},
 	{
+		weekday: 'Viernes',
 		date: 29,
 		month: 3,
 		year: 2024,
@@ -71,6 +77,7 @@ const holidays = [
 		name: "Viernes Santo"
 	},
 	{
+		weekday: 'Lunes',
 		date: 1,
 		month: 4,
 		year: 2024,
@@ -78,11 +85,28 @@ const holidays = [
 		name: "Feriado con fines turísticos"
 	},
 	{
+		weekday: 'Martes',
 		date: 2,
 		month: 4,
 		year: 2024,
 		monthName: "Abril",
 		name: "Día del Veterano y de los Caídos en la Guerra de Malvinas"
+	},
+	{
+		weekday: 'Miércoles',
+		date: 1,
+		month: 5,
+		year: 2024,
+		monthName: "Mayo",
+		name: "Día del Trabajador"
+	},
+	{
+		weekday: 'Sábado',
+		date: 25,
+		month: 5,
+		year: 2024,
+		monthName: "Mayo",
+		name: "Día de la Revolución de Mayo"
 	}
 ]
 
