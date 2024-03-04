@@ -124,9 +124,6 @@ const daysUntilNextHoliday = () => {
 
 const daysSinceLastHoliday = () => {
 	let daysSince = parseInt(dayjs().from(dayjs(`${lastHoliday.year}-${lastHoliday.month}-${lastHoliday.date}`), true))
-	if(dayjs().isLeapYear()) {
-		daysSince -= 1
-	}
 	return daysSince
 }
 
