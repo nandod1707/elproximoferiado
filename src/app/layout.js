@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Poppins } from "next/font/google";
 import { daysUntilNextHoliday } from "./holidays";
 import Analytics from 'analytics'
@@ -41,9 +40,9 @@ const analytics = Analytics({
 
 export default function RootLayout({ children }) {
 
-	useEffect(() => {
+	const pageView = (() => {
 		analytics.page()
-	}, []);
+	})()
 
 	return (
 		<html lang="en">

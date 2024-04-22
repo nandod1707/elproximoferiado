@@ -1,4 +1,15 @@
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
 import { nextHoliday, daysUntilNextHoliday } from "./holidays";
+
+const analytics = Analytics({
+	app: 'el-proximo-feriado',
+	plugins: [
+		googleAnalytics({
+			measurementIds: ['G-919V3NNBFH']
+		})
+	]
+})
 
 export default function Home() {
 

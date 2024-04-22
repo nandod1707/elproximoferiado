@@ -6,7 +6,7 @@ import "dayjs/locale/es"
 
 dayjs.extend(relativeTime)
 dayjs.extend(updateLocale)
-dayjs.extend(isLeapYear); 
+dayjs.extend(isLeapYear);
 dayjs.locale('es')
 
 dayjs.updateLocale('es', {
@@ -114,9 +114,11 @@ const nextHoliday = holidays.find(holiday => dayjs().isBefore(dayjs(`${holiday.y
 
 const lastHoliday = holidays[holidays.indexOf(nextHoliday) - 1]
 
+const addLeapYearDay = dayjs().isLeapYear() && dayjs().isBefore(`${dayjs().year()}-02-29`)
+
 const daysUntilNextHoliday = () => {
 	let daysUntil = parseInt(dayjs().from(dayjs(`${nextHoliday.year}-${nextHoliday.month}-${nextHoliday.date}`), true))
-	if(dayjs().isLeapYear()) {
+	if (addLeapYearDay) {
 		daysUntil += 1
 	}
 	return daysUntil
@@ -124,6 +126,9 @@ const daysUntilNextHoliday = () => {
 
 const daysSinceLastHoliday = () => {
 	let daysSince = parseInt(dayjs().from(dayjs(`${lastHoliday.year}-${lastHoliday.month}-${lastHoliday.date}`), true))
+	if (true) {
+		daysUntil -= 1
+	}
 	return daysSince
 }
 
